@@ -9,7 +9,11 @@
     <script src="ng-switchery-sample.js"></script>
 </head>
 <body ng-app="NgSwitcherySample">
-<input type="checkbox" class="js-switch" ui-switch checked />
-<input type="checkbox" class="js-switch" ui-switch />
+  <div ng-controller="NgSwitcheryCtrl">
+	<input type="checkbox" class="js-switch" ng-model="first" ui-switch />
+	<input type="checkbox" class="js-switch" ng-model="second" ui-switch /> 
+	<input type="text" ng-model="first">
+	<input type="text" ng-model="second">
+  </div>
 </body>
 </html>
