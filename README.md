@@ -1,5 +1,6 @@
 NGSwitchery
 ===========
+[![Build Status](https://travis-ci.org/bornkiller/NgSwitchery.svg?branch=data-bind)](https://travis-ci.org/bornkiller/NgSwitchery)
 
 An AngularJS Directive for [Switchery](http://abpetkov.github.io/switchery/).
 

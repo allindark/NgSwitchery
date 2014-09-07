@@ -5,7 +5,7 @@
  * @TODO implement Switchery as a service, https://github.com/abpetkov/switchery/pull/11
  */
 angular.module('NgSwitchery', [])
-    .directive('uiSwitch', ['$window', '$timeout','$log', '$parse', function($window, $timeout, $log, $parse) {
+    .directive('uiSwitch', ['$window', '$log', function($window, $log) {
 
         /**
          * Initializes the HTML element as a Switchery switch.
@@ -21,6 +21,7 @@ angular.module('NgSwitchery', [])
 
         function linkSwitchery(scope, elem, attrs, ngModel) {
             if(!ngModel) return false;
+
             var options = {};
             try {
                 options = angular.fromJson(attrs.uiSwitchOptions);
@@ -28,6 +29,15 @@ angular.module('NgSwitchery', [])
             catch (e) {
                 options = {};
             }
+
+            ngModel.$formatters.push(function(modelValue) {
+                return angular.equals(modelValue, true);
+            });
+
+            ngModel.$render = function() {
+                element.checked = ngModel.$modelValue;
+                switcher.setPosition(false);
+            };
 
             var switcher = new $window.Switchery(elem[0], options);
             var element = switcher.element;

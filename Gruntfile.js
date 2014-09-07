@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 
             // optionally, configure the reporter
             coverageReporter: {
-                type : 'html',
+                type : 'lcov',
                 dir : 'coverage/'
             },
 
