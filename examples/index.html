@@ -9,7 +9,9 @@
     <script src="ng-switchery-sample.js"></script>
 </head>
 <body ng-app="NgSwitcherySample">
-    <input type="checkbox" class="js-switch" ui-switch checked />
-    <input type="checkbox" class="js-switch" ui-switch="{color: '#E43B11', secondaryColor: '#F89279'}" checked />
+    <div ng-controller="NgSwitcheryCtrl">
+        <label for="active"></label>
+        <input type="checkbox" id="active" class="js-switch" ng-model="active" ui-switch />
+    </div>
 </body>
 </html>

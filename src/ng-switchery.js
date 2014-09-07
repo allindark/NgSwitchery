@@ -23,24 +23,26 @@ angular.module('NgSwitchery', [])
             if(!ngModel) return false;
             var options = {};
             try {
-                options = $parse(attrs.uiSwitch)(scope);
+                options = angular.fromJson(attrs.uiSwitchOptions);
             }
-            catch (e) {}
-            $timeout(function() {
-                var switcher = new $window.Switchery(elem[0], options);
-                var element = switcher.element;
-                element.checked = scope.initValue;
-                switcher.setPosition(false);
-                element.addEventListener('change',function(evt) {
-                    scope.$apply(function() {
-                        ngModel.$setViewValue(element.checked);
-                    })
+            catch (e) {
+                options = {};
+            }
+
+            var switcher = new $window.Switchery(elem[0], options);
+            var element = switcher.element;
+            element.checked = scope.initValue;
+            switcher.setPosition(false);
+            element.addEventListener('change',function(evt) {
+                scope.$apply(function() {
+                    ngModel.$setViewValue(element.checked);
                 })
-            }, 0);
+            });
         }
+
         return {
             require: 'ngModel',
-            restrict: 'AE',
+            restrict: 'A',
             scope : {initValue : '=ngModel'},
             link: linkSwitchery
         }
