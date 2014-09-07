@@ -23,7 +23,7 @@
     "karma-junit-reporter": "~0.2.2"
   },
   "scripts": {
-    "test": "grunt karma"
+    "test": "bower install && grunt karma"
   },
   "author": "bornkiller",
   "license": "MIT"
