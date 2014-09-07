@@ -1,18 +1,18 @@
 {
-    "name": "ng-switchery",
-    "version": "1.0.0-alpha2",
-    "main": "dist/ng-switchery.min.js",
-    "license": "MIT",
-    "ignore": [
-        "node_modules",
-        "bower_components",
-        "tests",
-        "examples"
-    ],
-    "dependencies": {
-        "switchery": "~0.3.5"
-    },
-    "devDependencies": {
-        "angular": "1.2.6"
-    }
+  "name": "ng-switchery",
+  "version": "1.0.0-alpha6",
+  "main": "src/ng-switchery.js",
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "tests",
+    "examples"
+  ],
+  "dependencies": {
+    "switchery": "~0.6.1"
+  },
+  "devDependencies": {
+    "angular": "~1.2.19"
+  }
 }
