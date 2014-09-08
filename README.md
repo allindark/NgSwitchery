@@ -1,6 +1,6 @@
 NGSwitchery
 ===========
-[![Build Status](https://travis-ci.org/bornkiller/NgSwitchery.svg?branch=data-bind)](https://travis-ci.org/bornkiller/NgSwitchery)
+[![Build Status](https://travis-ci.org/bornkiller/NgSwitchery.svg)](https://travis-ci.org/bornkiller/NgSwitchery)
 
 An AngularJS Directive for [Switchery](http://abpetkov.github.io/switchery/).
 
@@ -10,7 +10,8 @@ An AngularJS Directive for [Switchery](http://abpetkov.github.io/switchery/).
 2. Include `switchery/dist/switchery[.min].js` from your vendors/components folder in your scripts.
 3. Include `ng-switchery.js` in your scripts
 4. Declare a dependency on the NgSwitchery module
-5. Add the `ui-switch` attribute to a checkbox.
+5. Add the `ui-switch` attribute to a checkbox, add optional 'ui-switch-options' attribute to config
+   switchery.
 
 ##Example##
 
@@ -26,19 +27,21 @@ Insert checkbox html
 
 Setting Options
 ```html
-<input type="checkbox" class="js-switch" ui-switch="{color: '#E43B11', secondaryColor: '#F89279'}" />
+<input type="checkbox" id="active" class="js-switch" ng-model="active" ui-switch
+  ui-switch-options='{"color": "rgb(255, 119, 145)"}'/>
 ```
 
 
 Bower install
 ```
-bower install ng-switchery
+bower install bornkiller/NgSwitchery
 ```
 
 ##Alternative##
 You may also wish to look at how to achieve this with [pure CSS](https://github.com/abpetkov/switchery/issues/13).
 
 ##Notice on Version##
-This project is still in its very early stages and should not be considered production ready.
+This project is still in its develop stages and not bundled with nice unit test, so be careful considering production.
 
-At this time we are no longer using this project, but will continue to maintain it until someone else agrees to take over. This means that updates will be slow as this is not a priority for us. New releases will be made as our team has time to volunteer to the project.
+At this time, I am working on unit test. Till now, it has supported data bidirectional binding, but not support disable
+and ng-disable. New releases will resolve problems mentioned above, and it is production ready.
