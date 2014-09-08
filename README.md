@@ -1,6 +1,7 @@
 NGSwitchery
 ===========
 [![Build Status](https://travis-ci.org/bornkiller/NgSwitchery.svg)](https://travis-ci.org/bornkiller/NgSwitchery)
+[![Coverage Status](https://coveralls.io/repos/bornkiller/NgSwitchery/badge.png?branch=master)](https://coveralls.io/r/bornkiller/NgSwitchery?branch=master)
 
 An AngularJS Directive for [Switchery](http://abpetkov.github.io/switchery/).
 
@@ -10,7 +11,7 @@ An AngularJS Directive for [Switchery](http://abpetkov.github.io/switchery/).
 2. Include `switchery/dist/switchery[.min].js` from your vendors/components folder in your scripts.
 3. Include `ng-switchery.js` in your scripts
 4. Declare a dependency on the NgSwitchery module
-5. Add the `ui-switch` attribute to a checkbox, add optional 'ui-switch-options' attribute to config
+5. Add the `ui-switch` attribute to a checkbox, add optional `ui-switch-options` attribute to config
    switchery.
 
 ##Example##
