@@ -1,7 +1,7 @@
 NGSwitchery
 ===========
-[![Build Status](https://travis-ci.org/bornkiller/NgSwitchery.svg)](https://travis-ci.org/bornkiller/NgSwitchery)
-[![Coverage Status](https://coveralls.io/repos/bornkiller/NgSwitchery/badge.png?branch=master)](https://coveralls.io/r/bornkiller/NgSwitchery?branch=master)
+![Build Status](https://img.shields.io/travis/bornkiller/NgSwitchery/master.svg?style=flat)
+![Coverage Report](http://img.shields.io/coveralls/bornkiller/NgSwitchery.svg?style=flat)
 
 An AngularJS Directive for [Switchery](http://abpetkov.github.io/switchery/).
 
