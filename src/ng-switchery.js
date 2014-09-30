@@ -20,8 +20,6 @@ angular.module('NgSwitchery', [])
          */
 
         function linkSwitchery(scope, elem, attrs, ngModel) {
-            if(!ngModel) return false;
-
             var options = {};
             try {
                 options = angular.fromJson(attrs.uiSwitchOptions);
