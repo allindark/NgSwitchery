@@ -56,7 +56,7 @@ describe('just check ng-switchery simple dependability', function () {
         expect(target.prop('checked')).toBeFalsy();
     });
 
-    xit('DOM state should reflect on model from false to true', function () {
+    it('DOM state should reflect on model from false to true', function () {
         $scope.active = false;
         compileTemplate();
         expect($scope.active).toBeFalsy();
@@ -66,7 +66,7 @@ describe('just check ng-switchery simple dependability', function () {
         expect($scope.active).toBeTruthy();
     });
 
-    xit('DOM state should reflect on model from true to false', function () {
+    it('DOM state should reflect on model from true to false', function () {
         $scope.active = true;
         compileTemplate();
         expect($scope.active).toBeTruthy();

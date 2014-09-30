@@ -1,0 +1,32 @@
+{
+	"camelcase": true,
+	"curly": true,
+	"eqeqeq": true,
+	"immed": true,
+	"latedef": true,
+	"newcap": true,
+	"noarg": true,
+	"noempty": true,
+	"plusplus": true,
+	"undef": true,
+	"unused": false,
+	"evil": true,
+	"expr": false,
+	"strict": false,
+	"boss": false,
+	"eqnull": true,
+    "expr": false,
+	"node": true,
+    "globals": {
+      "define": true,
+      "require": true,
+      "describe": true,
+      "beforeEach": true,
+      "afterEach": true,
+      "it": true,
+      "angular": true,
+      "window": true,
+      "jQuery": true,
+      "$": true
+    }
+}
