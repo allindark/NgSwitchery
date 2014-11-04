@@ -4,9 +4,11 @@ describe('just check ng-switchery simple dependability', function () {
     var $compile;
     var element;
     var target;
+    var switcher;
     var compileTemplate = function() {
         element = $compile('<div><input type="checkbox" class="js-switch" ng-model="active" ui-switch /></div>')($scope);
         target = $(element).find(':checkbox').first();
+        switcher = target.next('span');
         $scope.$digest();
     };
 
@@ -62,7 +64,8 @@ describe('just check ng-switchery simple dependability', function () {
         expect($scope.active).toBeFalsy();
         target.prop('checked', true);
         target.change();
-        $scope.$digest();
+        //switcher.click();
+        //$scope.$digest();
         expect($scope.active).toBeTruthy();
     });
 
@@ -72,7 +75,8 @@ describe('just check ng-switchery simple dependability', function () {
         expect($scope.active).toBeTruthy();
         target.prop('checked', false);
         target.change();
-        $scope.$digest();
+        //switcher.click();
+        //$scope.$digest();
         expect($scope.active).toBeFalsy();
     });
 

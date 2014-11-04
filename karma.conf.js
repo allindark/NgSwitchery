@@ -20,7 +20,8 @@ module.exports = function(config) {
         'bower_components/angular-mocks/angular-mocks.js',
         'bower_components/switchery/dist/switchery.js',
         'src/ng-switchery.js',
-        'test/ng-switchery.spec.js'
+        'test/ng-switchery.spec.js',
+        'test/ng-switchery-disabled.spec.js'
     ],
 
 
@@ -46,8 +47,8 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    // available options 'Chrome', 'IE', 'Firefox', 'PhantomJS'while 'IE8','IE9' appoaching
-    browsers: ['Chrome'],
+    // available options 'Chrome', 'IE', 'Firefox', 'PhantomJS' while 'IE8','IE9' approaching
+    browsers: ['Chrome', 'IE', 'Firefox'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits

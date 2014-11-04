@@ -11,10 +11,12 @@
 <body ng-app="NgSwitcherySample">
     <div ng-controller="NgSwitcheryCtrl">
         <label for="active"></label>
-        <input type="checkbox" id="active" class="js-switch" ng-model="active" ui-switch
+        <input type="checkbox" id="active" class="js-switch" ng-model="active"ui-switch
          ui-switch-options='{"color": "rgb(255, 119, 145)"}'/>
         <label for="program"></label>
         <input type="checkbox" id="program" class="js-switch" ng-model="program" ui-switch />
+        <label for="manualDisabled"></label>
+        <input type="checkbox" id="manualDisabled" class="js-switch" ng-model="manualDisabled"  ng-disabled="switcheryDisabled"  ui-switch />
     </div>
 </body>
 </html>

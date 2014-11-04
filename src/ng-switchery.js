@@ -20,33 +20,61 @@ angular.module('NgSwitchery', [])
          */
 
         function linkSwitchery(scope, elem, attrs, ngModel) {
-            var options = {};
-            try {
-                options = angular.fromJson(attrs.uiSwitchOptions);
-            }
-            catch (e) {
-                options = {};
-            }
+            var switchery, element, options;
+            initializeOptions();
+            initializeSwitchery();
 
-            ngModel.$formatters.push(function(modelValue) {
-                return angular.equals(modelValue, true);
+            attrs.$observe('disabled', function(disabled) {
+                options.disabled = disabled;
+                initializeSwitchery();
             });
 
-            ngModel.$render = function() {
-                element.checked = ngModel.$modelValue;
-                switcher.setPosition(false);
-            };
+            function initializeOptions() {
+                var passedOptions;
+                var defaultOptions = {
+                     color          : '#64bd63',
+                     secondaryColor : '#dfdfdf',
+                     className      : 'switchery',
+                     disabled       : false,
+                     disabledOpacity: 0.5,
+                     speed          : '0.1s'
+                };
+                try {
+                    passedOptions = angular.fromJson(attrs.uiSwitchOptions);
+                } catch (e) {
+                    passedOptions = {};
+                }
 
-            var switcher = new $window.Switchery(elem[0], options);
-            var element = switcher.element;
-            element.checked = scope.initValue;
-            switcher.setPosition(false);
-            ngModel.$setViewValue(element.checked);
-            elem.on('change',function(evt) {
-                scope.$apply(function() {
-                    ngModel.$setViewValue(element.checked);
-                })
-            });
+                options = angular.extend({}, defaultOptions, passedOptions);
+            }
+
+            function initializeSwitchery() {
+                ngModel.$formatters.push(function(modelValue) {
+                    return angular.equals(modelValue, true);
+                });
+
+                ngModel.$render = function() {
+                    if (!attrs.disabled) {
+                        element.checked = ngModel.$modelValue;
+                        switchery.setPosition(false);
+                    }               
+                };
+
+                if (switchery) {
+                    angular.element(switchery.switcher).remove();
+                }
+
+                switchery = new $window.Switchery(elem[0], options);
+                element = switchery.element;
+                element.checked = scope.initValue;
+                switchery.setPosition(false);
+                ngModel.$setViewValue(element.checked);
+                elem.on('change',function() {
+                    scope.$apply(function() {
+                        ngModel.$setViewValue(element.checked);
+                    })
+                });
+            }
         }
 
         return {
