@@ -46,6 +46,6 @@ bower install bornkiller/NgSwitchery
 You may also wish to look at how to achieve this with [pure CSS](https://github.com/abpetkov/switchery/issues/13).
 
 ##Notice on Version
-This project reach milestone version, while not bundled with nice unit test, because of CI with phantomjs and some other reasons, so be careful considering production.
+This project reach milestone version, while not bundled with nice unit test, because of CI with phantomjs and some other reasons.
 
-Till now, it has supported data bidirectional binding and ng-disable directive. I write one example to check correctness and it is production ready.
+On the other hand, till now, it has supported data bidirectional binding and ng-disable directive. I write one example to check correctness and it is production ready.
