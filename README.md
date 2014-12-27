@@ -2,6 +2,8 @@ NGSwitchery
 ===========
 ![Build Status](https://img.shields.io/travis/bornkiller/NgSwitchery/master.svg?style=flat)
 ![Coverage Report](http://img.shields.io/coveralls/bornkiller/NgSwitchery.svg?style=flat)
+![Package Dependency](https://david-dm.org/bornkiller/NgSwitchery.svg?style=flat)
+![Package DevDependency](https://david-dm.org/bornkiller/NgSwitchery/dev-status.svg?style=flat)
 
 An AngularJS Directive for [Switchery](http://abpetkov.github.io/switchery/).
 
