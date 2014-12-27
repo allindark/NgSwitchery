@@ -21,7 +21,7 @@ gulp.task('jshint', function() {
     .pipe(jshint.reporter(stylish));
 });
 
-gulp.task('publish-prepare', ['clean', 'jshint'], function() {
+gulp.task('publish', ['clean', 'jshint'], function() {
   gulp.src('src/ng-switchery.js')
     .pipe(ngAnnotate())
     .pipe(uglify())
